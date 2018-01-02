@@ -11,3 +11,4 @@ Main code features
 >- An "EctoSubsystem" manager that is in charge of calling every relevant function to operate any mechanism/system
 >- Every "EctoSubsystem" automatically adds itself to the manager, and it also needs to define telemetry functions
 >- A configuration file system in the form of EctoSettings, which allows us to change parameters without recompiling the code
+>- Completly made by students

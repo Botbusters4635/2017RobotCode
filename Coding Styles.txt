@@ -1,0 +1,10 @@
+Convetion for loggers=
+    Variables on log = Should be appended with ":" e.g "Value: (variable here)"
+    Initialization = Info, Should end message with ... e.g. "Initializing EctoTank..."
+    Setup functions = Info, Should end message with ... e.g. "Seting up slave motors..."
+    Functions start executing = Trace
+    Main actions being executed = Trace, add everything except variable manipulation, e.g. "Resetting timers", but no "Added 3 to (variable name)".
+    Not fatal errors = Warning
+    Fatal errors = Critical
+    Periodic functions = None, should only signal that they started executing
+    Reporting variable values = Showld be as follows: "Calculating / Getting (variable name here): variable" 

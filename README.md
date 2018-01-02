@@ -3,7 +3,7 @@
 Overview
 --------
 This is the FRC robot code that Botbusters 4635 developed during the 2017 Off-season.  The main goal we set ourselves was that of
-implementing an algorithm that would allow us to follow an easily modifiable pre-defined path, we achieved this through implementing what is known as RobotState (An idea taken in part from Chezy Puffs 254 FRC Team), this tool allows us to know the relative coordinate the robot is currently at in relation to the position where it started. Using this data and a Pure Pursuit algorithm we are able to simply upload .path files to the roboRio, and have the program fetch waypoints from them, resulting in reliable path following.
+implementing an algorithm that would allow us to follow an easily modifiable, pre-defined path, we achieved this through implementing what is known as RobotState (an idea taken in part from Chezy Puffs 254 FRC Team), this tool allows us to know the relative coordinate the robot is currently at in relation to the position where it started. Using this data and a Pure Pursuit algorithm we are able to simply upload .path files to the roboRio, and have the program fetch waypoints from them, resulting in reliable path following.
 
 Main code features
 ------------------

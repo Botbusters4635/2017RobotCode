@@ -1,0 +1,70 @@
+plugins {
+    id "cpp"
+    id "visual-studio"
+    id "jaci.openrio.gradle.GradleRIO" version "2017.11.09"
+}
+
+def TEAM = 4635
+
+// Define my targets (RoboRIO) and artifacts (deployable files)
+// This is added by GradleRIO's backing project EmbeddedTools.
+deploy {
+    targets {
+        target("roborio", jaci.openrio.gradle.frc.RoboRIO) {
+            team = TEAM
+            addresses  << "roboRIO-4635-FRC." << "10.46.35.68"
+        }
+    }
+    artifacts {
+        artifact('frcNative', jaci.openrio.gradle.frc.FRCNativeArtifact) {
+            targets << "roborio"
+            component = 'frcUserProgram'
+
+            debug = false
+        }
+    }
+}
+
+// Defining my C++ project. In this case, it is called 'frcUserProgram',
+// and is of the language C++.
+model {
+  libraries {
+
+   }
+
+    components {
+        frcUserProgram(NativeExecutableSpec) {
+            // Target the RoboRIO (arm-frc-linux-gnueabihf)
+            targetPlatform 'roborio'
+            sources.cpp {
+                // This is where our source files are located (src/cpp for C++ files, src/include for headers)
+                source {
+                    srcDirs = ['src/']
+                    include '**/*.cpp'
+                }
+                exportedHeaders{
+                    srcDirs = ['src/', 'include/']
+                    include '**/*.hpp', '**/*.h'
+                }
+
+                // Define my dependencies. In this case, WPILib (+ friends), CTRE Toolsuite (Talon SRX) and NavX.
+                lib library: "wpilib"
+                lib library: "ctre"
+                lib library: "navx"
+                //lib library: "pathfinder"
+                //lib library: "boost"
+            }
+        }
+    }
+
+    binaries {
+            all {
+                cppCompiler.args '-g'
+                linker.args '-g'
+            }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.2.1'
+}

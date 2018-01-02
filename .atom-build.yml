@@ -1,0 +1,26 @@
+cmd: "echo Building... && find {PROJECT_PATH}  -type f -name \"*.gch\" -delete &&  make all"
+name: "Build"
+
+targets:
+  Deploy:
+    cmd: "echo Deploying... && find {PROJECT_PATH}  -type f -name \"*.gch\" -delete && make deploy"
+  Clean:
+    cmd: "echo Cleaning... && find {PROJECT_PATH}  -type f -name \"*.gch\" -delete && make clean"
+  Build and Deploy:
+    cmd: "echo Building and Deploying... && find {PROJECT_PATH}  -type f -name \"*.gch\" -delete && make build_deploy"
+  Deploy Settings:
+    cmd: "echo Deploying Settings... && find {PROJECT_PATH}  -type f -name \"*.gch\" -delete &&  make put_settings"
+  Get Settings:
+    cmd: "echo Getting Settings from robot... && find {PROJECT_PATH}  -type f -name \"*.gch\" -delete &&  make get_settings"
+  Get Logs:
+    cmd: "echo Getting Logs from robot... && find {PROJECT_PATH}  -type f -name \"*.gch\" -delete &&  make get_logs"
+  Clean Logs:
+    cmd: "echo Erasing Logs in robot... && find {PROJECT_PATH}  -type f -name \"*.gch\" -delete &&  make clean_logs"
+  Build Docker:
+    cmd: "echo Building... && find {PROJECT_PATH}  -type f -name \"*.gch\" -delete &&  docker run --expose=0-9000  --rm -v \"{PROJECT_PATH}\":/project -w /project --name gradle ectobuild ./gradlew build --offline --no-daemon"
+  Deploy Docker:
+    cmd: "echo Deploying... && find {PROJECT_PATH}  -type f -name \"*.gch\" -delete && docker run --expose=0-9000  --rm -v \"{PROJECT_PATH}\":/project -w /project --name gradle ectobuild ./gradlew deploy --offline --no-daemon"
+  Clean Docker:
+    cmd: "echo Cleaning... && find {PROJECT_PATH}  -type f -name \"*.gch\" -delete && docker run --expose=0-9000  --rm -v \"{PROJECT_PATH}\":/project -w /project --name gradle ectobuild ./gradlew clean --offline --no-daemon"
+  Build and Deploy Docker:
+    cmd: "echo Building and Deploying... && find {PROJECT_PATH}  -type f -name \"*.gch\" -delete && docker run --expose=0-9000  --rm -v \"{PROJECT_PATH}\":/project -w /project --name gradle ectobuild ./gradlew build --offline && ./gradlew deploy --offline"

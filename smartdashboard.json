@@ -1,0 +1,233 @@
+{
+  "dividerPosition": 0.3264984227129338,
+  "tabPane": [
+    {
+      "title": "SmartDashboard",
+      "autoPopulate": true,
+      "autoPopulatePrefix": "SmartDashboard/",
+      "widgetPane": {
+        "0,0": {
+          "size": [
+            3,
+            2
+          ],
+          "content": {
+            "_type": "Graph",
+            "_source0": "network_table:///SmartDashboard/SpeedRobotLeft",
+            "Visible time": 30.0,
+            "SmartDashboard/SpeedRobotLeft visible": true
+          }
+        },
+        "3,0": {
+          "size": [
+            3,
+            2
+          ],
+          "content": {
+            "_type": "Graph",
+            "_source0": "network_table:///SmartDashboard/SpeedRobotRight",
+            "Visible time": 30.0,
+            "SmartDashboard/SpeedRobotRight visible": true
+          }
+        },
+        "0,4": {
+          "size": [
+            3,
+            2
+          ],
+          "content": {
+            "_type": "Text View",
+            "_source0": "network_table:///SmartDashboard/MatchTime"
+          }
+        },
+        "6,0": {
+          "size": [
+            2,
+            1
+          ],
+          "content": {
+            "_type": "Boolean Box",
+            "_source0": "network_table:///SmartDashboard/Inverted",
+            "colorWhenTrue": "#7CFC00FF",
+            "colorWhenFalse": "#8B0000FF"
+          }
+        },
+        "6,1": {
+          "size": [
+            2,
+            1
+          ],
+          "content": {
+            "_type": "Boolean Box",
+            "_source0": "network_table:///SmartDashboard/Gear Intaked Enabled",
+            "colorWhenTrue": "#7CFC00FF",
+            "colorWhenFalse": "#8B0000FF"
+          }
+        },
+        "6,2": {
+          "size": [
+            2,
+            1
+          ],
+          "content": {
+            "_type": "Boolean Box",
+            "_source0": "network_table:///SmartDashboard/SpeedShift",
+            "colorWhenTrue": "#7CFC00FF",
+            "colorWhenFalse": "#8B0000FF"
+          }
+        },
+        "6,3": {
+          "size": [
+            1,
+            1
+          ],
+          "content": {
+            "_type": "Text View",
+            "_source0": "network_table:///SmartDashboard/Alliance"
+          }
+        },
+        "7,3": {
+          "size": [
+            1,
+            1
+          ],
+          "content": {
+            "_type": "Text View",
+            "_source0": "network_table:///SmartDashboard/x"
+          }
+        },
+        "3,4": {
+          "size": [
+            1,
+            1
+          ],
+          "content": {
+            "_type": "Text View",
+            "_source0": "network_table:///SmartDashboard/y"
+          }
+        },
+        "4,4": {
+          "size": [
+            1,
+            1
+          ],
+          "content": {
+            "_type": "Text View",
+            "_source0": "network_table:///SmartDashboard/angle"
+          }
+        },
+        "5,4": {
+          "size": [
+            1,
+            1
+          ],
+          "content": {
+            "_type": "Text View",
+            "_source0": "network_table:///SmartDashboard/PDP Current"
+          }
+        },
+        "6,4": {
+          "size": [
+            1,
+            1
+          ],
+          "content": {
+            "_type": "Text View",
+            "_source0": "network_table:///SmartDashboard/PDP Power"
+          }
+        },
+        "7,4": {
+          "size": [
+            1,
+            1
+          ],
+          "content": {
+            "_type": "Text View",
+            "_source0": "network_table:///SmartDashboard/PDP Energy"
+          }
+        },
+        "3,5": {
+          "size": [
+            1,
+            1
+          ],
+          "content": {
+            "_type": "Voltage View",
+            "_source0": "network_table:///SmartDashboard/Controller Voltage",
+            "min": 7.0,
+            "max": 12.0,
+            "center": 0.0,
+            "orientation": "HORIZONTAL",
+            "numTickMarks": 5.0
+          }
+        },
+        "4,5": {
+          "size": [
+            1,
+            1
+          ],
+          "content": {
+            "_type": "Text View",
+            "_source0": "network_table:///SmartDashboard/Controller Current"
+          }
+        },
+        "3,2": {
+          "size": [
+            3,
+            2
+          ],
+          "content": {
+            "_type": "Text View",
+            "_source0": "network_table:///SmartDashboard/RightPosition"
+          }
+        },
+        "0,2": {
+          "size": [
+            3,
+            2
+          ],
+          "content": {
+            "_type": "Text View",
+            "_source0": "network_table:///SmartDashboard/LeftPosition"
+          }
+        },
+        "5,5": {
+          "size": [
+            1,
+            1
+          ],
+          "content": {
+            "_type": "Text View",
+            "_source0": "network_table:///SmartDashboard/navX Port Resets"
+          }
+        },
+        "6,5": {
+          "size": [
+            1,
+            1
+          ],
+          "content": {
+            "_type": "Text View",
+            "_source0": "network_table:///SmartDashboard/navX Discarded Bytes"
+          }
+        },
+        "7,5": {
+          "size": [
+            1,
+            1
+          ],
+          "content": {
+            "_type": "Text View",
+            "_source0": "network_table:///SmartDashboard/navX Updates Per Sec"
+          }
+        }
+      }
+    },
+    {
+      "title": "LiveWindow",
+      "autoPopulate": true,
+      "autoPopulatePrefix": "LiveWindow/",
+      "widgetPane": {}
+    }
+  ]
+}
